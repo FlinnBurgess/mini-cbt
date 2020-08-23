@@ -282,7 +282,11 @@ class _AboutPageState extends State<AboutPage> {
                 textAlign: TextAlign.center,
               ),
               SizedBox(
-                height: 30,
+                height: 10,
+              ),
+              Divider(),
+              SizedBox(
+                height: 10,
               ),
               RichText(
                   textAlign: TextAlign.center,
@@ -330,14 +334,22 @@ class _AboutPageState extends State<AboutPage> {
                       ])),
               Text("(e.g. I felt like I had failed and felt sad for the rest of the day)", textAlign: TextAlign.center,),
               SizedBox(
-                height: 30,
+                height: 10,
+              ),
+              Divider(),
+              SizedBox(
+                height: 10,
               ),
               Text(
                 "Next, it will walk you through some exercises which encourage you to challenge and dispute your thoughts:",
                 textAlign: TextAlign.center,
               ),
               SizedBox(
-                height: 30,
+                height: 10,
+              ),
+              Divider(),
+              SizedBox(
+                height: 10,
               ),
               RichText(
                   textAlign: TextAlign.center,
@@ -400,7 +412,11 @@ class _AboutPageState extends State<AboutPage> {
                                 "Is it worth ruminating about the thought at the moment? Sometimes there's nothing to be gained from keeping the thoughts in your mind. Consider writing the thought down to get it out of your head, or setting a time later in the day to think about it so that you can forget it for now.")
                       ])),
               SizedBox(
-                height: 30,
+                height: 10,
+              ),
+              Divider(),
+              SizedBox(
+                height: 10,
               ),
               Text(
                 "The aim is that by giving you an easily accessible tool to guide you through recording your thoughts and feelings when you catch yourself thinking in these ways, you will begin to gradually change your patterns of thought and become more optimistic.",
