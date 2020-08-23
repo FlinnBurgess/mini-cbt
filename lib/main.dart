@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mini_cbt/about_page.dart';
 import 'package:mini_cbt/past_thoughts_page.dart';
 import 'package:mini_cbt/record_thought_page.dart';
+import 'package:mini_cbt/support_me_page.dart';
 import 'package:mini_cbt/thoughts.dart';
 import 'package:provider/provider.dart';
 
@@ -116,6 +117,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () => Navigator.of(context).push(
                     MaterialPageRoute(builder: (_) => AboutPage())),
                 child: Text('About'),
+              ),
+              RaisedButton(
+                onPressed: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => SupportMePage())),
+                child: Text('Support the developer'),
               ),
             ].where((element) => element != null).toList(),
           );
