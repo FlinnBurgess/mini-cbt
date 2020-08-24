@@ -43,7 +43,7 @@ class SupportMePage extends StatelessWidget {
                           ),
                       child: SizedBox(width: 110, child: Text('Rate the app', textAlign: TextAlign.center,)),
                       onPressed: () => launch(
-                          'https://play.google.com/store/apps/details?id=com.flinnburgess.gloomhaven_deck_tracker'),
+                          'https://play.google.com/store/apps/details?id=com.flinnburgess.mini_cbt'),
                     ))),
                 Container(
                     width: 300,
