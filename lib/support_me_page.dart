@@ -5,11 +5,11 @@ class SupportMePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        extendBodyBehindAppBar: true,
         appBar: AppBar(
           title: Text('Support the developer'),
         ),
-        body: Column(
+        body: Center(
+            child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Wrap(
@@ -24,19 +24,27 @@ class SupportMePage extends StatelessWidget {
                 Container(
                     width: 300,
                     child: Center(
-                        child: RaisedButton(
-                          child: Text('Buy me a coffee'),
-                          onPressed: () =>
-                              launch('https://www.buymeacoffee.com/flinnburgess'),
-                        ))),
+                        child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18.0),
+                        side: BorderSide(color: Colors.black)
+                      ),
+                      child: SizedBox(width: 110, child: Text('Buy me a coffee', textAlign: TextAlign.center,)),
+                      onPressed: () =>
+                          launch('https://www.buymeacoffee.com/flinnburgess'),
+                    ))),
                 Container(
                     width: 300,
                     child: Center(
-                        child: RaisedButton(
-                          child: Text('Rate the app'),
-                          onPressed: () => launch(
-                              'https://play.google.com/store/apps/details?id=com.flinnburgess.gloomhaven_deck_tracker'),
-                        ))),
+                        child: FlatButton(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0),
+                              side: BorderSide(color: Colors.black)
+                          ),
+                      child: SizedBox(width: 110, child: Text('Rate the app', textAlign: TextAlign.center,)),
+                      onPressed: () => launch(
+                          'https://play.google.com/store/apps/details?id=com.flinnburgess.gloomhaven_deck_tracker'),
+                    ))),
                 Container(
                     width: 300,
                     child: Text(
@@ -45,6 +53,6 @@ class SupportMePage extends StatelessWidget {
               ],
             ),
           ],
-        ));
+        )));
   }
 }

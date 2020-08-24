@@ -40,12 +40,112 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: Consumer<Thoughts>(builder: (context, thoughts, _) {
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              FlatButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                    side: BorderSide(color: Colors.black)),
+                onPressed: () {
+                  if (thoughts.thoughtInProgress) {
+                    _showDeleteCurrentThoughtConfirmation(context, thoughts);
+                  } else {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (_) => RecordThoughtPage()));
+                  }
+                },
+                child: SizedBox(
+                    width: 165,
+                    height: 50,
+                    child: Center(
+                        child: Text(
+                      'Record a new thought',
+                      textAlign: TextAlign.center,
+                      textScaleFactor: 1.3,
+                    ))),
+              ),
+              FlatButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                      side: BorderSide(color: Colors.black)),
+                  onPressed: thoughts.thoughtInProgress
+                      ? () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (_) => RecordThoughtPage()));
+                        }
+                      : null,
+                  disabledColor: Colors.grey[300],
+                  child: SizedBox(
+                      width: 165,
+                      height: 50,
+                      child: Center(
+                          child: Text(
+                        'Finish thought in progress',
+                        textAlign: TextAlign.center,
+                        textScaleFactor: 1.3,
+                      )))),
+              FlatButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                    side: BorderSide(color: Colors.black)),
+                onPressed: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => PastThoughtsPage())),
+                child: SizedBox(
+                    width: 165,
+                    height: 50,
+                    child: Center(
+                        child: Text(
+                      'Past thoughts',
+                      textAlign: TextAlign.center,
+                      textScaleFactor: 1.3,
+                    ))),
+              ),
+              FlatButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                    side: BorderSide(color: Colors.black)),
+                onPressed: () => Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => AboutPage())),
+                child: SizedBox(
+                    width: 165,
+                    height: 50,
+                    child: Center(
+                        child: Text(
+                      'Learn more',
+                      textAlign: TextAlign.center,
+                      textScaleFactor: 1.3,
+                    ))),
+              ),
+              FlatButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                    side: BorderSide(color: Colors.black)),
+                onPressed: () => Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => SupportMePage())),
+                child: SizedBox(
+                    width: 165,
+                    height: 50,
+                    child: Center(
+                        child: Text(
+                      'Support the developer',
+                      textAlign: TextAlign.center,
+                      textScaleFactor: 1.3,
+                    ))),
+              ),
+            ].where((element) => element != null).toList(),
+          );
+        }),
+      ),
+    );
   }
 
   void _showDeleteCurrentThoughtConfirmation(context, Thoughts thoughts) {
@@ -72,61 +172,5 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             ));
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Consumer<Thoughts>(builder: (context, thoughts, _) {
-          return Column(
-            // Invoke "debug painting" (press "p" in the console, choose the
-            // "Toggle Debug Paint" action from the Flutter Inspector in Android
-            // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-            // to see the wireframe for each widget.
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              RaisedButton(
-                onPressed: () {
-                  if (thoughts.thoughtInProgress) {
-                    _showDeleteCurrentThoughtConfirmation(context, thoughts);
-                  } else {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (_) => RecordThoughtPage()));
-                  }
-                },
-                child: Text('Record a new thought'),
-              ),
-              RaisedButton(
-                  onPressed: thoughts.thoughtInProgress
-                      ? () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (_) => RecordThoughtPage()));
-                        }
-                      : null,
-                  child: Text('Finish the thought in progress')),
-              RaisedButton(
-                onPressed: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (_) => PastThoughtsPage())),
-                child: Text('Past thoughts'),
-              ),
-              RaisedButton(
-                onPressed: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (_) => AboutPage())),
-                child: Text('About'),
-              ),
-              RaisedButton(
-                onPressed: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (_) => SupportMePage())),
-                child: Text('Support the developer'),
-              ),
-            ].where((element) => element != null).toList(),
-          );
-        }),
-      ),
-    );
   }
 }

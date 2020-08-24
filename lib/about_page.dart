@@ -106,7 +106,7 @@ class _AboutPageState extends State<AboutPage> {
                     ? '"Skiing is difficult"'
                     : '"The trails were icy today"',
                 style: TextStyle(color: Colors.grey),
-                textScaleFactor: 1.2,
+                textScaleFactor: 1.4,
               ),
               SizedBox(
                 height: 10,
@@ -116,7 +116,7 @@ class _AboutPageState extends State<AboutPage> {
                     ? '"My boss is a bastard"'
                     : '"My boss is in a bad mood"',
                 style: TextStyle(color: Colors.grey),
-                textScaleFactor: 1.2,
+                textScaleFactor: 1.4,
               ),
               SizedBox(
                 height: 35,
@@ -181,7 +181,7 @@ class _AboutPageState extends State<AboutPage> {
                     ? '"I\'m repulsive"'
                     : '"I\'m repulsive to him"',
                 style: TextStyle(color: Colors.grey),
-                textScaleFactor: 1.2,
+                textScaleFactor: 1.4,
               ),
               SizedBox(
                 height: 10,
@@ -191,7 +191,7 @@ class _AboutPageState extends State<AboutPage> {
                     ? '"All teachers are unfair"'
                     : '"This particular teacher is unfair"',
                 style: TextStyle(color: Colors.grey),
-                textScaleFactor: 1.2,
+                textScaleFactor: 1.4,
               ),
               SizedBox(
                 height: 35,
@@ -256,7 +256,7 @@ class _AboutPageState extends State<AboutPage> {
                     ? '"I have no talent in poker"'
                     : '"I have no luck in poker"',
                 style: TextStyle(color: Colors.grey),
-                textScaleFactor: 1.2,
+                textScaleFactor: 1.4,
               ),
               SizedBox(
                 height: 10,
@@ -266,7 +266,7 @@ class _AboutPageState extends State<AboutPage> {
                     ? '"I\'m stupid"'
                     : '"You\'re stupid"',
                 style: TextStyle(color: Colors.grey),
-                textScaleFactor: 1.2,
+                textScaleFactor: 1.4,
               ),
               SizedBox(
                 height: 15,
@@ -300,7 +300,10 @@ class _AboutPageState extends State<AboutPage> {
                             text:
                                 "What happened that you are now thinking about?")
                       ])),
-              Text("(e.g. My child didn't do her homework)", textAlign: TextAlign.center,),
+              Text(
+                "(e.g. My child didn't do her homework)",
+                textAlign: TextAlign.center,
+              ),
               SizedBox(
                 height: 15,
               ),
@@ -313,10 +316,12 @@ class _AboutPageState extends State<AboutPage> {
                             text: "Belief: ",
                             style: TextStyle(fontWeight: FontWeight.bold)),
                         TextSpan(
-                            text:
-                                "What are you beliefs about the adversity?")
+                            text: "What are you beliefs about the adversity?")
                       ])),
-              Text("(e.g. I am a bad parent)", textAlign: TextAlign.center,),
+              Text(
+                "(e.g. I am a bad parent)",
+                textAlign: TextAlign.center,
+              ),
               SizedBox(
                 height: 15,
               ),
@@ -332,7 +337,10 @@ class _AboutPageState extends State<AboutPage> {
                             text:
                                 "What did you do or feel in response to these beliefs?")
                       ])),
-              Text("(e.g. I felt like I had failed and felt sad for the rest of the day)", textAlign: TextAlign.center,),
+              Text(
+                "(e.g. I felt like I had failed and felt sad for the rest of the day)",
+                textAlign: TextAlign.center,
+              ),
               SizedBox(
                 height: 10,
               ),
@@ -363,7 +371,10 @@ class _AboutPageState extends State<AboutPage> {
                             text:
                                 "What evidence do you have against your beliefs?")
                       ])),
-              Text("(e.g. I spend hours with my child every week teaching her sports and music, I'm not a bad parent)", textAlign: TextAlign.center,),
+              Text(
+                "(e.g. I spend hours with my child every week teaching her sports and music, I'm not a bad parent)",
+                textAlign: TextAlign.center,
+              ),
               SizedBox(
                 height: 15,
               ),
@@ -379,7 +390,10 @@ class _AboutPageState extends State<AboutPage> {
                             text:
                                 "What are some alternative, less catastrophic explanations for the adversity?")
                       ])),
-              Text("(e.g. I've been very busy at work this week so didn't have the time to check if my child had done her homework)", textAlign: TextAlign.center,),
+              Text(
+                "(e.g. I've been very busy at work this week so didn't have the time to check if my child had done her homework)",
+                textAlign: TextAlign.center,
+              ),
               SizedBox(
                 height: 15,
               ),
@@ -395,7 +409,10 @@ class _AboutPageState extends State<AboutPage> {
                             text:
                                 "Even if your belief is true, is it really the end of the world? Go back and look for evidence on the contrary.")
                       ])),
-              Text("(e.g. Maybe I wasn't the best parent lately. But until recently I've done a really good job making sure she does her homework.)", textAlign: TextAlign.center,),
+              Text(
+                "(e.g. Maybe I wasn't the best parent lately. But until recently I've done a really good job making sure she does her homework.)",
+                textAlign: TextAlign.center,
+              ),
               SizedBox(
                 height: 15,
               ),
