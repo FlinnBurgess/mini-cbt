@@ -24,79 +24,76 @@ class PastThoughtsPage extends StatelessWidget {
 
   Widget asCard(Map thought, Function deleteThought) {
     return Padding(
-        padding: EdgeInsets.fromLTRB(20, 30, 20, 0),
-        child: Stack(alignment: Alignment.center, children: [
-          Card(
-            elevation: 3,
-            child: Padding(
-                padding: EdgeInsets.all(30),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      'Adversity',
-                      textScaleFactor: 1.6,
-                      style: TextStyle(color: Colors.blue[600]),
-                    ),
-                    Text(thought['adversity'], textScaleFactor: 1.2),
-                    SizedBox(
-                      height: 30,
-                    ),
-                    Text(
-                      'Belief',
-                      textScaleFactor: 1.6,
-                      style: TextStyle(color: Colors.red[600]),
-                    ),
-                    Text(thought['belief'], textScaleFactor: 1.2),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      'Consequence',
-                      textScaleFactor: 1.6,
-                      style: TextStyle(color: Colors.red[600]),
-                    ),
-                    Text(thought['consequence'], textScaleFactor: 1.2),
-                    SizedBox(
-                      height: 30,
-                    ),
-                    Text(
-                      'Contradicting Evidence',
-                      textScaleFactor: 1.6,
-                      style: TextStyle(color: Colors.green[600]),
-                    ),
-                    Text(thought['evidence'], textScaleFactor: 1.2),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      'Alternative Explanations',
-                      textScaleFactor: 1.6,
-                      style: TextStyle(color: Colors.green[600]),
-                    ),
-                    Text(thought['alternatives'], textScaleFactor: 1.2),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      'True Implications',
-                      textScaleFactor: 1.6,
-                      style: TextStyle(color: Colors.green[600]),
-                    ),
-                    Text(thought['implications'], textScaleFactor: 1.2),
-                  ],
+      padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+      child: Container(
+        child: Padding(
+            padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  'Adversity',
+                  textScaleFactor: 1.6,
+                ),
+                Text(thought['adversity'], textScaleFactor: 1.2),
+                SizedBox(
+                  height: 40,
+                ),
+                Text(
+                  'Belief',
+                  textScaleFactor: 1.6,
+                ),
+                Text(thought['belief'], textScaleFactor: 1.2),
+                SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  'Consequence',
+                  textScaleFactor: 1.6,
+                ),
+                Text(thought['consequence'], textScaleFactor: 1.2),
+                SizedBox(
+                  height: 40,
+                ),
+                Text(
+                  'Contradicting Evidence',
+                  textScaleFactor: 1.6,
+                ),
+                Text(thought['evidence'], textScaleFactor: 1.2),
+                SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  'Alternative Explanations',
+                  textScaleFactor: 1.6,
+                ),
+                Text(thought['alternatives'], textScaleFactor: 1.2),
+                SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  'True Implications',
+                  textScaleFactor: 1.6,
+                ),
+                Text(thought['implications'], textScaleFactor: 1.2),
+                SizedBox(height: 20,),
+                Center(
+                    child: IconButton(
+                  onPressed: deleteThought,
+                  icon: Icon(Icons.delete),
+                  iconSize: 35,
+                  color: Colors.red[700],
                 )),
-          ),
-          Positioned(
-            top: 10,
-            right: 10,
-            child: IconButton(
-              color: Colors.red[800],
-              onPressed: deleteThought,
-              icon: Icon(Icons.delete),
-            ),
-          ),
-        ]));
+                SizedBox(
+                  height: 20,
+                ),
+                Divider(
+                  thickness: 3,
+                ),
+              ],
+            )),
+      ),
+    );
   }
 
   void _showDeleteThoughtConfirmation(context, Thoughts thoughts, Map thought) {
